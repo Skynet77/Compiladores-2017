@@ -1,2 +1,5 @@
 # Compiladores-2017
-analizador lexico json en lenguaje C
+analizador de fuente json en lenguaje C
+
+1ra parte:
+analizador léxico
