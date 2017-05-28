@@ -36,7 +36,7 @@ void lexema()
 	    {
 		    //incrementar el numero de linea
 		    numLinea++;
-			fputs("\n",salida);
+//			fputs("\n",salida);
 		    continue;
 	    }
 	    else if (car==' ')
@@ -44,7 +44,7 @@ void lexema()
             do
             {
                 // se encarga de cargar los espacios leidos
-				fputs(" ",salida);
+//				fputs(" ",salida);
                 car=fgetc(entrada); 
             }while(car ==' ');
             car=ungetc(car,entrada);
@@ -54,7 +54,7 @@ void lexema()
             //si es un tabulador que guarde los 4 espacios correspondientes
             while(car=='\t')
             {
-				fputs("\t",salida);
+//				fputs("\t",salida);
 	        	car=fgetc(entrada);
             }
         }
@@ -169,8 +169,8 @@ void lexema()
 						acepto=1;
                         t.compLex=NUMBER;
 						strcpy(t.lexema,id);
-						fputs("NUMBER",salida);
-						fputs(" ",salida);
+//						fputs("NUMBER",salida);
+//						fputs(" ",salida);
 						break;
 					case -1:
 						if (car==EOF){
@@ -215,7 +215,6 @@ void lexema()
                         car=fgetc(entrada);
 
                     ungetc(car,entrada);
-                   // con=-1;
                     break;                       
 				}
 				else
@@ -227,8 +226,8 @@ void lexema()
 			    id[indice]='\0';
             strcpy(t.lexema,id);
 			t.compLex = STRING;
-			fputs("STRING",salida);
-			fputs(" ",salida);
+//			fputs("STRING",salida);
+//			fputs(" ",salida);
 			break;
 		}
 		else if (car==':')
@@ -236,48 +235,48 @@ void lexema()
             //puede ser un :
             t.compLex=DOS_PUNTOS;
             strcpy(t.lexema,":");
-			fputs("DOS_PUNTOS",salida);
-			fputs(" ",salida);
+//			fputs("DOS_PUNTOS",salida);
+//			fputs(" ",salida);
             break;
 		}
 		else if (car==',')
 		{
 			t.compLex=COMA;
 			strcpy(t.lexema,",");
-			fputs("COMA",salida);
-			fputs(" ",salida);
+//			fputs("COMA",salida);
+//			fputs(" ",salida);
 			break;
 		}
 		else if (car=='[')
 		{
 			t.compLex=L_CORCHETE;
 			strcpy(t.lexema,"[");
-			fputs("L_CORCHETE",salida);
-			fputs(" ",salida);
+//			fputs("L_CORCHETE",salida);
+//			fputs(" ",salida);
 			break;
 		}
 		else if (car==']')
 		{
 			t.compLex=R_CORCHETE;
 			strcpy(t.lexema,"]");
-			fputs("R_CORCHETE",salida);
-			fputs(" ",salida);
+//			fputs("R_CORCHETE",salida);
+//			fputs(" ",salida);
 			break;
 		}
 		else if (car=='{')
 		{
 			t.compLex=L_LLAVE;
 			strcpy(t.lexema,"{");
-			fputs("L_LLAVE",salida);
-			fputs(" ",salida);
+//			fputs("L_LLAVE",salida);
+//			fputs(" ",salida);
 			break;		
         }
         else if (car=='}')
 		{
 			t.compLex=R_LLAVE;
 			strcpy(t.lexema,"}");
-			fputs("R_LLAVE",salida);
-			fputs(" ",salida);			
+//			fputs("R_LLAVE",salida);
+//			fputs(" ",salida);			
 			break;		
         }
 		else if (car=='n' || car=='N')
@@ -288,8 +287,8 @@ void lexema()
             {
                 t.compLex = PR_NULL;
                 strcpy(t.lexema,aux);
-				fputs("PR_NULL",salida);
-				fputs(" ",salida);
+//				fputs("PR_NULL",salida);
+//				fputs(" ",salida);
             }
             else
             {
@@ -313,8 +312,8 @@ void lexema()
             {
                 t.compLex = PR_FALSE;
                 strcpy(t.lexema,aux);
-				fputs("PR_FALSE",salida);
-				fputs(" ",salida);
+//				fputs("PR_FALSE",salida);
+//				fputs(" ",salida);
             }
             else{
                 sprintf(msg,"%c no esperado",car);
@@ -337,8 +336,8 @@ void lexema()
             {
                 t.compLex = PR_TRUE;
                 strcpy(t.lexema,aux);
-				fputs("PR_TRUE",salida);
-				fputs(" ",salida);
+//				fputs("PR_TRUE",salida);
+//				fputs(" ",salida);
             }
             else
             {
@@ -369,12 +368,12 @@ void lexema()
 		t.compLex=EOF;
 		strcpy(t.lexema,"EOF");
 		sprintf(t.lexema,"EOF");
-		fputs("EOF",salida);
-		fputs(" ",salida);
+//		fputs("EOF",salida);
+//		fputs(" ",salida);
 	}
 }
 
-int main(int argc,char* args[])
+/*int main(int argc,char* args[])
 {
 	//apertura y lectura del archivo fuente
 	if(argc > 1)
@@ -399,4 +398,4 @@ int main(int argc,char* args[])
 	}
 
 	return 0;
-}
+}*/
