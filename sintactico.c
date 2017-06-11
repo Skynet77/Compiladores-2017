@@ -285,7 +285,7 @@ void errorSintactico(){
 }
 
 /*Main*/
-int main (int argc,char* args[]){
+/*int main (int argc,char* args[]){
     if(argc > 1)
     {
         if (!(entrada=fopen(args[1],"rt")))
@@ -303,4 +303,4 @@ int main (int argc,char* args[]){
     }
 
     return 0;
-}
+}*/
